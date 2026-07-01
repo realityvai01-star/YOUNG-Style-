@@ -94,6 +94,15 @@ const fetchSubscribers = async () => {
   useEffect(() => {
     if (unlocked) {
       fetchAnalytics();
+
+   useEffect(() => {
+  if (unlocked) {
+    fetchAnalytics();
+    fetchSubscribers();
+  }
+}, [unlocked, orders]);
+      
+      
     }
   }, [unlocked, orders]);
 
