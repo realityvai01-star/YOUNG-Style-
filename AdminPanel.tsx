@@ -35,7 +35,9 @@ export default function AdminPanel({
   const [passphrase, setPassphrase] = useState("");
   const [unlocked, setUnlocked] = useState(false);
   const [lockError, setLockError] = useState("");
-
+  
+  const [subscribers, setSubscribers] = useState([]);
+  
   // Analytics state
   const [analyticsData, setAnalyticsData] = useState<any>(null);
   const [isSyncing, setIsSyncing] = useState(false);
