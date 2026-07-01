@@ -130,6 +130,26 @@ export default function App() {
     if (usr && tkn) {
       setUser(usr);
       setToken(tkn);
+      fetch('/api/auth/social', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    provider: 'google', // অথবা 'facebook'
+    name: 'ব্যবহারকারীর নাম',
+    email: 'user@example.com',
+    profilePicture: 'https://example.com/photo.jpg',
+  }),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+  // এখানে সফল লগইনের পর পরবর্তী পদক্ষেপ নিন
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
       localStorage.setItem("ys_token", tkn);
       localStorage.setItem("ys_user", JSON.stringify(usr));
       loadCoreData();
