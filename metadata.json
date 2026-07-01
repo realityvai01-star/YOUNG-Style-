@@ -1,0 +1,6 @@
+{
+  "name": "YOUNG Style",
+  "description": "Premium Shirt & T-Shirt E-commerce Website",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
