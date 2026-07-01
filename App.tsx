@@ -4,6 +4,28 @@ import {
   MapPin, Clock, Truck, ShieldCheck, Check, Info, FileText
 } from "lucide-react";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDRAcFEiFZkVkBzSSK2vqWZlMZ5xvtZPZg",
+  authDomain: "young-style-b68d9.firebaseapp.com",
+  projectId: "young-style-b68d9",
+  storageBucket: "young-style-b68d9.firebasestorage.app",
+  messagingSenderId: "342531476001",
+  appId: "1:342531476001:web:8a37116a9c67a608367160",
+  measurementId: "G-XJNK1LW3ZV"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 import { Product, Order, Coupon, Blog, Message, WebsiteSettings, User } from "./types";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
