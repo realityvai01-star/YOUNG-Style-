@@ -57,7 +57,26 @@ export default function AdminPanel({
       console.error("Failed to load analytics data", err);
     }
   };
+  
+const fetchSubscribers = async () => {
+  try {
+    const res = await fetch('/api/subscribers', {
+      headers: {
+        'Authorization': `Bearer ${token || localStorage.getItem('ys_token')}`
+      }
+    });
 
+    if (res.ok) {
+      const data = await res.json();
+      setSubscribers(data);
+    } else {
+      console.error("Failed to fetch subscribers");
+    }
+  } catch (err) {
+    console.error("Error fetching subscribers:", err);
+  }
+};
+  
   const handleSyncNow = async () => {
     setIsSyncing(true);
     try {
