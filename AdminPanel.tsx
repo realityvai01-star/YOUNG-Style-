@@ -704,12 +704,30 @@ export default function AdminPanel({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-xs font-semibold text-slate-600">
                       {(analyticsData?.visitors?.visitorLocations || [
                         { name: "Dhaka (ঢাকা)", count: 1850 },
+                        { name: "Chittagong (চট্টগ্রাম)", count: 720 }
+                        { name: "Dhaka (ঢাকা)", count: 1850 },
                         { name: "Chittagong (চট্টগ্রাম)", count: 720 },
                         { name: "Sylhet (সিলেট)", count: 310 },
-                        { name: "Khulna (খুলনা)", count: 240 },
-                        { name: "Rajshahi (রাজশাহী)", count: 180 },
-                        { name: "Barisal (বরিশাল)", count: 110 }
-                      ]).map((loc: any, idx: number, arr: any[]) => {
+                        { name: "India (ভারত)", count: 1500 },
+                        { name: "Pakistan (পাকিস্তান)", count: 800 },
+                        { name: "China (চীন)", count: 1200 },
+                        { name: "Dubai (দুবাই)", count: 200 },
+                        { name: "Canada (কানাডা)", count: 450 },
+                        { name: "Sri Lanka (শ্রীলঙ্কা)", count: 250 },
+                        { name: "America (আমেরিকা)", count: 1100 },
+                        { name: "Japan (জাপান)", count: 600 },
+                        { name: "London (লন্ডন)", count: 320 },
+                        { name: "West Indies (ওয়েস্ট ইন্ডিজ)", count: 180 },
+                        { name: "Australia (অস্ট্রেলিয়া)", count: 400 },
+                        { name: "New York (নিউ ইয়র্ক)", count: 450 },
+                        { name: "Toronto (টরন্টো)", count: 150 },
+                        { name: "Sydney (সিডনি)", count: 120 },
+                        { name: "Paris (প্যারিস)", count: 180 },
+                        { name: "Tokyo (টোকিও)", count: 140 },
+                        { name: "Berlin (বার্লিন)", count: 90 },
+                        { name: "Madrid (মাদ্রিদ)", count: 85 },
+                        { name: "Rome (রোম)", count: 110 }
+                     ]).map((loc: any, idx: number, arr: any[]) => {
                         const maxCount = Math.max(...arr.map((l: any) => l.count));
                         const pct = Math.round((loc.count / (maxCount || 1)) * 100);
                         return (
